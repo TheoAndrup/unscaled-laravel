@@ -1,0 +1,54 @@
+{
+    "name": "unscaled/unscaled-laravel",
+    "description": "Official Laravel Package for UnscaleDB global database.",
+    "keywords": [
+        "unscaled",
+        "unscaled-laravel"
+    ],
+    "homepage": "https://github.com/unscaled/unscaled-laravel",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Theo Andrup",
+            "email": "theo@ecebo.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Unscaled\\UnscaledLaravel\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Unscaled\\UnscaledLaravel\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Unscaled\\UnscaledLaravel\\UnscaledLaravelServiceProvider"
+            ],
+            "aliases": {
+                "UnscaledLaravel": "Unscaled\\UnscaledLaravel\\UnscaledLaravelFacade"
+            }
+        }
+    }
+}
