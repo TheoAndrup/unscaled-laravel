@@ -5,7 +5,7 @@ namespace Unscaled\UnscaledLaravel;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Unscaled\UnscaledLaravel\Skeleton\SkeletonClass
+ *
  */
 class UnscaledLaravelFacade extends Facade
 {
@@ -14,7 +14,7 @@ class UnscaledLaravelFacade extends Facade
      *
      * @return string
      */
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return 'unscaled-laravel';
     }
